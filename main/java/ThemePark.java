@@ -4,14 +4,12 @@ import java.util.ArrayList;
 
 public class ThemePark {
 
-	private String name;
+	protected String name;
 	private ArrayList<IReviewed> allRidesAndStalls;
-	private ArrayList<IReviewed> ratingsList;
 
 
 	public ThemePark(String name) {
 		this.name = name;
-		this.ratingsList = new ArrayList<>();
 		this.allRidesAndStalls = new ArrayList<>();
 
 	}
@@ -21,14 +19,21 @@ public class ThemePark {
 	}
 
 	public int countRatingsInArray(){
-		return ratingsList.size();
+		return allRidesAndStalls.size();
 	}
 
-	public void addRatingToArray(IReviewed review){
-		ratingsList.add(review);
+	public void addRideOrStall(IReviewed rideOrStall){
+		this.allRidesAndStalls.add(rideOrStall);
 	}
-	public void addRidesAndStalls(IReviewed thingToAdd){
-		this.allRidesAndStalls.add(thingToAdd);
+
+	public ArrayList getRatings(){
+		return this.allRidesAndStalls;
 	}
+	public void outputAllNamesAndRatings(){
+		for (IReviewed rating : allRidesAndStalls){
+			System.out.println("Ride Name: " + rating.getName() + "\nRating: " + rating.getRating());
+		}
+	}
+
 
 }

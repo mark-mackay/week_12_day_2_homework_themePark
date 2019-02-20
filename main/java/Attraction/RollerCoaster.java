@@ -7,7 +7,7 @@ import Visitor.Visitor;
 
 public class RollerCoaster extends Attraction implements ISecurity, IReviewed {
 	private int rating;
-	private String name;
+	protected String name;
 	public RollerCoaster(String name, int rating) {
 		super(name);
 		this.rating = rating;

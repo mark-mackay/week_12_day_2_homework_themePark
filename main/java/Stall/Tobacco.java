@@ -7,7 +7,7 @@ import Visitor.Visitor;
 public class Tobacco extends Stall implements IReviewed, ISecurity {
 
     private int rating;
-    private String name;
+    protected String name;
     public Tobacco(String name, String ownerName, String parkingSpot , int rating) {
         super(name, ownerName, parkingSpot);
         this.rating = rating;

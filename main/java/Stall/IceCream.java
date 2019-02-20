@@ -4,7 +4,7 @@ import Interfaces.IReviewed;
 
 public class IceCream extends Stall implements IReviewed {
 	private int rating;
-	private String name;
+	protected String name;
 	public IceCream(String name, String ownerName, String parkingSpot , int rating) {
 		super(name, ownerName, parkingSpot);
 		this.rating = rating;
@@ -16,6 +16,6 @@ public class IceCream extends Stall implements IReviewed {
 	}
 	@Override
 	public String getName() {
-		return name;
+		return this.name;
 	}
 }
