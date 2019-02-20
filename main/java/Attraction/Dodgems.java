@@ -7,6 +7,7 @@ public class Dodgems extends Attraction implements IReviewed {
         protected String name;
         public Dodgems(String name, int rating) {
             super(name);
+            this.name = name;
             this.rating = rating;
         }
 
@@ -16,6 +17,6 @@ public class Dodgems extends Attraction implements IReviewed {
         }
         @Override
             public String getName() {
-            return name;
+            return this.name;
         }
 }

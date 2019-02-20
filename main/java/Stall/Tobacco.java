@@ -11,6 +11,7 @@ public class Tobacco extends Stall implements IReviewed, ISecurity {
     public Tobacco(String name, String ownerName, String parkingSpot , int rating) {
         super(name, ownerName, parkingSpot);
         this.rating = rating;
+        this.name =  name;
     }
 
     @Override
@@ -19,7 +20,7 @@ public class Tobacco extends Stall implements IReviewed, ISecurity {
     }
     @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     @Override

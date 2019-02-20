@@ -10,6 +10,7 @@ public class RollerCoaster extends Attraction implements ISecurity, IReviewed {
 	protected String name;
 	public RollerCoaster(String name, int rating) {
 		super(name);
+		this.name =  name;
 		this.rating = rating;
 	}
 
@@ -27,6 +28,6 @@ public class RollerCoaster extends Attraction implements ISecurity, IReviewed {
 	}
 	@Override
 	public String getName() {
-		return name;
+		return this.name;
 	}
 }
