@@ -7,22 +7,15 @@ import Visitor.Visitor;
 public class Tobacco extends Stall implements IReviewed, ISecurity {
 
     private int rating;
-    protected String name;
     public Tobacco(String name, String ownerName, String parkingSpot , int rating) {
         super(name, ownerName, parkingSpot);
         this.rating = rating;
-        this.name =  name;
     }
 
     @Override
     public int getRating() {
         return rating;
     }
-    @Override
-    public String getName() {
-        return this.name;
-    }
-
     @Override
     public boolean isAllowedTo(Visitor visitor) {
         boolean allowed = true;

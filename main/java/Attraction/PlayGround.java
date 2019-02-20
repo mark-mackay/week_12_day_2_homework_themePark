@@ -5,7 +5,6 @@ import Visitor.Visitor;
 
 public class PlayGround extends Attraction implements ISecurity, IReviewed {
     private int rating;
-    private String name;
     public PlayGround(String name, int rating) {
         super(name);
         this.rating = rating;
@@ -22,9 +21,5 @@ public class PlayGround extends Attraction implements ISecurity, IReviewed {
     @Override
     public int getRating() {
         return rating;
-    }
-    @Override
-    public String getName() {
-        return name;
     }
 }
